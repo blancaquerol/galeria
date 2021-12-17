@@ -1,0 +1,101 @@
+//Disposición de los botones theme
+header
+    position: fixed
+    top: 0
+    right: 0
+#theme-btn
+    display: flex
+    justify-content: flex-end
+    button
+        margin: 5px
+        border-radius: 50px
+        padding: 20px
+        border: 0
+        &#theme1
+            background-color: white
+            border: 1px #c4c4c4 solid
+        &#theme2
+            background-color: black
+            color: white
+            border: 1px black solid
+        &#theme3
+            background-color: #DDC484
+            color: black
+            border: 1px #cdaa53 solid
+        @media screen and ( max-width: 900px )
+            padding: 10px
+
+//Clases que se van a añadir a body para cambiar el theme
+
+//Tema oscuro
+.dark-theme
+    background-color: black
+    h1
+        color: #acacac
+    h2
+        color: #6a6a6a
+    p
+        color: #e9e9e9
+
+    //Botón info
+    #info
+        background-color: #0d2e59
+        border: 1px solid #96b3d8
+        color: #d7e9ff
+        &:hover
+            background-color: #061a35
+            color: #d7e9ff
+        &:active, &:focus
+            outline: 1px solid #275a9c
+    //Cuadro con información
+    #datos_cuadros
+        background-color: #0d2e59bf
+        h5
+            color: white
+        h6
+            color: #96b3d8
+    //Botones para pasar imagenes
+    button.boton
+        background-color: #ffffffb9
+        border: 1px solid #bababab3
+        &:active, &:focus
+            outline: 1px solid #ffffff
+        &:hover
+            background-color: #bababab3
+            color: white
+
+//Tema sepia
+.sepia-theme
+    background-color: #DDC484
+    h1
+        color: #8e6b13
+    h2
+        color: #fffcf5
+    p
+        color: #5c450a
+
+    //Botón info
+    #info
+        background-color: #5c450a
+        border: 1px solid #483504
+        color: #DDC484
+        &:hover
+            background-color: #483504
+            color: #DDC484
+        &:active, &:focus
+            outline: 1px solid #5c450ac5
+    //Cuadro con información
+    #datos_cuadros
+        background-color: #5c450ac5
+        h5
+            color: white
+        h6
+            color: #DDC484
+    //Botones para pasar imagenes
+    button.boton
+        background-color: #ffebb8cb
+        border: 1px solid #8e6b13
+        &:active, &:focus
+            outline: 1px solid #483504
+        &:hover
+            background-color: #e4c36ecb

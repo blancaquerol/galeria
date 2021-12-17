@@ -1,0 +1,56 @@
+//Ordenar los botones
+.buttons
+    display: flex
+    justify-content: space-evenly
+    margin: 20px 0
+
+//Cuadro con la información de las obras
+#datos_cuadros
+    position: absolute
+    left: 20vw
+    top: 5vh
+    background-color: #3772bfd2
+    display: block
+    width: fit-content
+    height: fit-content
+    padding: 0 15px
+    max-width: 30vw
+    visibility: hidden
+    h5
+        color: #ffff
+    h6
+        color: #d3e6ff
+
+//Botón Info
+#info
+    background-color: #5196f0
+    border: 1px solid #81b7fd
+    color: #031a37
+    border-radius: 5px
+    padding: 0 35px
+    &:hover
+        background-color: #3772bf
+        color: #f1f7ff
+    &:active, &:focus
+        outline: 1px solid #3772bf
+
+//Activar el cuadro de información
+.active
+    visibility: visible !important
+
+//Botón para pasar imágenes
+button#arrow
+    border-radius: 5px 30px 30px 5px
+button#arrow2
+    border-radius: 30px 5px 5px 30px
+
+button.boton
+    background-color: #dbdedf6d
+    border: 1px solid #8c919375
+    padding: 5px 15px
+    z-index: 30
+    &:active, &:focus
+        outline: 1px solid black
+    &:hover
+        background-color: #616161c6
+        color: white

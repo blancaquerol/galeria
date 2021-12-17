@@ -1,0 +1,88 @@
+//Estilos iniciales
+#caja
+    height: 500px
+    width: auto
+    display: block
+    margin: 0 auto
+
+.mini
+    width: 70px
+    margin: 2px
+
+.caja_mini
+    display: flex
+    justify-content: center
+    margin: 20px
+
+//Transiciones de las miniaturas
+img.mini
+    margin-bottom: 20px
+    transition: all .2s .05s
+    &:hover
+        transform: scale(2) translateY(-10px)
+        @media screen and ( max-width: 900px )
+            transform: scale(1.3) translateY(-5px)
+
+//Miniaturas en @media
+.caja_mini
+    img
+        border-radius: 5px
+    @media screen and ( max-width: 900px )
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: masonry
+        justify-items: center
+        grid-gap: 5px
+        width: 40vw
+        margin: 10px auto
+        img
+            width: 130px
+            height: 80px
+            object-fit: cover
+    @media screen and ( max-width: 700px )
+        width: 20vw
+        grid-gap: 0
+        margin: 15px auto
+        img
+            width: 100px
+            height: 60px
+            object-fit: cover
+
+//Estilos de la caja grande
+img#caja
+    margin-top: 20px
+    border-radius: 5px
+    width: auto
+    height: 60vh
+    max-width: 75vw
+    object-fit: contain
+    @media screen and ( max-width: 1200px )
+        width: auto
+        height: 50vh
+        max-width: 80vw
+    @media screen and ( max-width: 800px )
+        width: auto
+        height: 40vh
+        max-width: 80vw
+
+//Clase que se tiene que aplicar a la img seleccionada. No funciona todavía :)
+.efecto
+    animation: efecto-escala 0.8s
+
+@keyframes efecto-escala
+    0%
+        transform: scale(0.5)
+        opacity: 0.5
+    50%
+        transform: scale(1.01)
+        opacity: 1
+    100%
+        transform: scale(1)
+        opacity: 1
+
+//Orden de elementos
+.big_img
+    z-index: -1
+    position: relative
+#caja
+    z-index: -2
